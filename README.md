@@ -1,70 +1,68 @@
-# dashboard-engine
+# orangeboard-core
 
-This is a web application designed to manage a server through a web interface. It includes functionalities like a terminal, file explorer, and system resource monitoring.
-
-![Static Badge](https://img.shields.io/badge/dashboard_engine-dashboard_engine?color=%23ffe800)
-![GitHub top language](https://img.shields.io/github/languages/top/d1zxult/dashboard-engine)
-![GitHub License](https://img.shields.io/github/license/d1zxult/dashboard-engine?color=%239500ff)
-![GitHub Repo stars](https://img.shields.io/github/stars/d1zxult/dashboard-engine?logoColor=%2300c6ff)
+**orangeboard-core** is a web application designed to help you manage a server through a user-friendly web interface. It provides tools like a terminal, file explorer, and real-time system monitoring, all accessible via a web browser.
 
 ## Features
 
-- Terminal: Execute commands directly from the web interface.
-- Explorer: Browse, upload, and download files on the server.
-- Resource Monitoring: View real-time information about server resource usage, including CPU, memory, and disk.
-- User Authentication: Secure access to the dashboard with user login.
+- **Terminal**: Execute system commands directly from the web interface.
+- **File Explorer**: Browse, upload, and download files on the server.
+- **Resource Monitoring**: View real-time information on CPU, memory, and disk usage.
+- **Module Support**: Add and use third-party modules to extend functionality.
 
 ## Getting Started
 
-1.Clone the repository:
-```bash
-git clone https://github.com/d1zxult/dashboard-engine.git
-cd dashboard-engine
-```
+1. **Clone the repository**:
+   git clone https://github.com/d1zxult/orangeboard-core.git
+   cd dashboard-engine
 
-2.Install the required packages:
-```bash
-pip install -r requirements.txt
-```
+2. **Install dependencies**:
+   pip install -r requirements.txt
 
-3.Run the application:
-```bash
-python3 initialization.py
-```
+3. **Run the application**:
+   python3 initialization.py
 
-4.Open your web browser and navigate to http://localhost:5000.
+4. **Open your browser** and navigate to http://localhost:5000.
 
 ## Usage
 
-- Log in with your credentials (Default: root/toor).
-- Use the terminal to execute commands.
-- Navigate through the file explorer to manage files.
-- Monitor server resources in real-time.
+- **Log in** using the default credentials (Username: root, Password: toor).
+- **Manage your server**: Use the terminal, explore files, and monitor resources in real-time.
+
+## Adding Modules
+
+To extend functionality with third-party modules:
+
+1. Clone the module repository:
+   git clone https://github.com/d1zxult/orangeboard-modules.git
+
+2. Drag and drop the selected modules into the `modules` folder within the **orangeboard-core** project.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License. See the LICENSE.md file for more details.
 
 ## Contributing
 
-Contributions are welcome! Please fork the repository and submit a pull request for any improvements or bug fixes.
+If you'd like to contribute, please fork the repository and submit a pull request for any improvements or bug fixes.
 
 ## Acknowledgments
 
-- All contributors for their efforts.
+A special thanks to all contributors for their efforts and contributions.
 
-## Commit Descriptions
+## Commit Guidelines
 
-| Name     | Description                                                      |
+To maintain clear commit history, use the following naming conventions:
+
+| Type     | Description                                                      |
 |----------|------------------------------------------------------------------|
-| build    | Building project or changing external dependencies               |
-| sec      | Security, vulnerabilities                                        |
-| ci       | CI configuration and script work                                 |
-| docs     | Documentation update                                             |
-| feat     | Adding new features                                              |
+| build    | Build process updates or changes to dependencies                 |
+| sec      | Security fixes or vulnerability patches                          |
+| ci       | CI configuration and script updates                              |
+| docs     | Documentation updates                                            |
+| feat     | Introduction of new features                                     |
 | fix      | Bug fixes                                                        |
 | perf     | Performance improvements                                         |
-| refactor | Code refactoring without fixing bugs or adding new features      |
-| revert   | Reverting to previous commits                                    |
-| style    | Code style changes (tabs, spaces, periods, commas, etc.)         |
-| test     | Adding tests                                                     |
+| refactor | Code refactoring without adding features or fixing bugs          |
+| revert   | Revert to previous commits                                       |
+| style    | Code style changes (e.g., formatting, missing semicolons)        |
+| test     | Adding or updating tests                                         |

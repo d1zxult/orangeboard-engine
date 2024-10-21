@@ -1,5 +1,5 @@
-import psutil
 import os
+import psutil
 import subprocess
 
 class ResourcesHandler:

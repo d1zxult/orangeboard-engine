@@ -1,86 +1,94 @@
 <!DOCTYPE html>
 <html lang="en-US" data-bs-theme="auto">
-  <head>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
 
-    <title>app/terminal</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='media/favicon-16.ico') }}">
+  <title>app/terminal</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='media/favicon.ico') }}">
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/core.style.css') }}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <style>
-      body {
-          background-color: #f8f9fa;
-          height: 100vh;
-          overflow: hidden;
-      }
-      .sidebar {
-          height: 100vh;
-          padding: 20px;
-          background-color: #343a40;
-          color: #f8f9fa;
-          overflow-y: auto;
-      }
-      .sidebar a {
-          color: #f8f9fa;
-          text-decoration: none;
-          display: block;
-          margin: 15px 0;
-      }
-      .content {
-          padding: 20px;
-          height: 100vh;
-          overflow-y: auto;
-      }
-    </style>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/default.style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/url_styles/terminal.style.css') }}">
 
-  </head>
-  <body>
+</head>
 
-    <div class="container-fluid">
-      <div class="row">
-        <nav class="col-md-3 col-lg-2 d-md-block sidebar">
-          <div class="text-center">
-            <h4>dashboard-engine</h4>
-            <h5>version: 0.0.3-a (alpha)</h5>
-          </div>
-          <a href="/overview" class="btn btn-secondary">
-            <i class="bi bi-cpu-fill" style="color: #ffffff;"></i> Overview
-          </a>
-          <a href="/explorer" class="btn btn-secondary">
-            <i class="bi bi-folder-fill" style="color: #ffffff;"></i> Explorer
-          </a>
-          <a href="#" class="btn btn-secondary">
-            <i class="bi bi-terminal-fill" style="color: #ffffff;"></i> Terminal
-          </a>
-          <a href="/modules" class="btn btn-secondary">
-            <i class="bi bi-box-fill" style="color: #ffffff;"></i> Modules
-          </a>
-          <a href="/settings" class="btn btn-secondary">
-            <i class="bi bi-gear-fill" style="color: #ffffff;"></i> Settings
-          </a>
-        </nav>
+<body>
 
-        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 content">
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-3 col-lg-2 d-md-block sidebar">
+        <div class="text-center">
+          <h4>orangeboard-core</h4>
+          <h5>version: 0.0.4-a (alpha)</h5>
+        </div>
+        <hr class="my-3">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a href="/overview" class="nav-link">
+              <i class="bi bi-cpu-fill"></i> Overview
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/explorer" class="nav-link">
+              <i class="bi bi-folder-fill"></i> Explorer
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link active">
+              <i class="bi bi-terminal-fill"></i> Terminal
+            </a>
+          </li>
+        </ul>
+        <hr class="my-2">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a href="/logging" class="nav-link">
+              <i class="bi bi-file-text-fill"></i> Logging (Module)
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/testing" class="nav-link">
+              <i class="bi bi-exclamation-triangle-fill"></i> Testing (Module)
+            </a>
+          </li>
+        </ul>
+        <hr class="my-2">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a href="/modules" class="nav-link">
+              <i class="bi bi-box-fill"></i> Modules
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/settings" class="nav-link">
+              <i class="bi bi-gear-fill"></i> Settings
+            </a>
+          </li>
+        </ul>
+      </nav>
 
-        </main>
-      </div>
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 content">
+
+      </main>
     </div>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/socket.io-client/dist/socket.io.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/moment@2.30.1/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/socket.io-client/dist/socket.io.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/moment@2.30.1/moment.min.js"></script>
 
-    <script src="{{ url_for('static', filename='scripts/core.script.js') }}"></script>
+  <script src="{{ url_for('static', filename='scripts/default.script.js') }}"></script>
+  <script src="{{ url_for('static', filename='scripts/url_scripts/terminal.script.js') }}"></script>
 
-  </body>
+</body>
+
 </html>
