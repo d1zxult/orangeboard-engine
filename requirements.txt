@@ -1,0 +1,5 @@
+Flask==3.0.3
+flask-socketio==5.4.1
+psutil==6.0.0
+gputil==1.4.0
+loguru==0.7.2
